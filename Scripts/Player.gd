@@ -3,15 +3,15 @@ class_name Player
 
 @export var default_gravity : float = 0.05
 @export var jump_vel : float = 1.5
-@export var default_x_vel : float = 0.0075
+@export var default_x_vel : float = 0.006
+@export var rotate_speed : float = 3
 
 @onready var down_raycast = $down_cast
 @onready var up_raycast = $up_cast
 @onready var hurtbox = $hurtbox
 @onready var children_parent = $"../child_bricks"
 @onready var mesh = $mesh_transform
-
-var current_gravity : float = default_gravity
+@onready var current_gravity : float = default_gravity
 var consumed_buffer = false # this becomes consumed when the player clicks on a jump block, they need to click again to reset
 
 func _ready() -> void:
@@ -77,5 +77,5 @@ func _tick_rotation(): #visual rotation of mesh
 	if down_raycast.is_colliding():
 		mesh.rotation_degrees.z = round(mesh.rotation_degrees.z/90.0)*90.0 # snap to closest 90 deg increment
 	else:
-		mesh.rotation_degrees.z -= 3
+		mesh.rotation_degrees.z -= rotate_speed
 	

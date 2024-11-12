@@ -25,7 +25,6 @@ axis_lock_angular_z = true
 physics_material_override = SubResource("PhysicsMaterial_p6xwp")
 gravity_scale = 0.0
 script = ExtResource("1_2on0x")
-default_x_vel = 0.006
 
 [node name="down_cast" type="RayCast3D" parent="RigidBody3D"]
 target_position = Vector3(0, -0.07, 0)
