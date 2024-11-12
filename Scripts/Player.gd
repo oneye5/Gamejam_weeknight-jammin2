@@ -6,11 +6,12 @@ class_name Player
 @export var default_x_vel : float = 0.0061
 @export var rotate_speed : float = 3
 
+@onready var visual_mesh = $"../Mesh_transform"
 @onready var down_raycast = $down_cast
 @onready var up_raycast = $up_cast
 @onready var hurtbox = $hurtbox
 @onready var children_parent = $"../child_bricks"
-@onready var mesh = $mesh_transform
+var visual_rot : float = 0
 @onready var current_gravity : float = default_gravity
 var consumed_buffer = false # this becomes consumed when the player clicks on a jump block, they need to click again to reset
 var speed_multiplier = 1
@@ -26,7 +27,7 @@ func _physics_process(delta: float) -> void:
 	_tick_die()
 	_tick_rotation()
 	_tick_scroll()
-	print(xPos)
+
 
 func _tick_scroll():
 	xPos += speed_multiplier * default_x_vel
@@ -81,7 +82,7 @@ func _player_died():
 
 func _tick_rotation(): #visual rotation of mesh
 	if down_raycast.is_colliding():
-		mesh.rotation_degrees.z = round(mesh.rotation_degrees.z/90.0)*90.0 # snap to closest 90 deg increment
+		visual_rot = round(visual_rot/90.0)*90.0 # snap to closest 90 deg increment
 	else:
-		mesh.rotation_degrees.z -= rotate_speed
+		visual_rot -= rotate_speed
 	

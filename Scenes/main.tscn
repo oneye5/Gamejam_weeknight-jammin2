@@ -210,6 +210,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36, -0.08, 0)
 [node name="2x8_14" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.656, -0.288, 0)
 
+[node name="2x8_77" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.976, -0.384, 0)
+
+[node name="2x8_78" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.616, -0.384, 0)
+
 [node name="2x8_15" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.296, -0.288, 0)
 
@@ -515,6 +521,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.256, -0.096, 0)
 
 [node name="2x80" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.416, -0.096, 0)
+
+[node name="2x139" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28, -0.48, 0)
+
+[node name="2x172" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28, -0.576, 0)
+
+[node name="2x173" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28, -0.672, 0)
+
+[node name="2x174" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28, -0.768, 0)
+
+[node name="2x175" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28, -0.864, 0)
+
+[node name="2x176" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28, -0.96, 0)
+
+[node name="2x177" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28, -1.056, 0)
+
+[node name="2x178" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28, -1.152, 0)
 
 [node name="2x25" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.776, -0.192, 0)
