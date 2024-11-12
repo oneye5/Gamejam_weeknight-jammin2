@@ -54,7 +54,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16, -0.08, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, -0.08, 0)
 
 [node name="2x8" parent="misc/Ground" instance=ExtResource("4_sac78")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92, 0.016, 0)
 
 [node name="2x9" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73711, 0.0200455, 0.00474685)
