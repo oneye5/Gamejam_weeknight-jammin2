@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dt7mxnoojefu3"]
+[gd_scene load_steps=5 format=3 uid="uid://dt7mxnoojefu3"]
 
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_2tv50"]
+
+[sub_resource type="Gradient" id="Gradient_qvceq"]
+offsets = PackedFloat32Array(0, 0.986301)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.4)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_joicp"]
+frequency = 0.0013
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_iflqc"]
+seamless = true
+color_ramp = SubResource("Gradient_qvceq")
+noise = SubResource("FastNoiseLite_joicp")
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -19,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.223529)
+color = Color(0, 0, 0, 0.768627)
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchors_preset = 8
@@ -48,3 +60,27 @@ offset_bottom = -24.0
 grow_vertical = 0
 text = "song:
 Rampart - Waterflame"
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+offset_left = 6.0
+offset_top = 11.0
+offset_right = 197.0
+offset_bottom = 112.0
+text = "Controls:
+	left click   - jump
+	right click - place brick
+	escape      - pause
+
+
+
+note:
+hardware acceleration settings in your browser are reccomended to be on for this game. You may get poor performance otherwise."
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_iflqc")

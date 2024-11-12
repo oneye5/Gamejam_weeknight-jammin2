@@ -623,6 +623,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.56, 0.016, 0)
 [node name="2x9" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73711, 0.0200455, 0.00474685)
 
+[node name="2x185" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(10000, 0, 0, 0, 1, 0, 0, 0, 1, 2.73711, -4.71595, 0.00474685)
+
 [node name="2x15" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.08111, 0.0200455, 0.00474685)
 
