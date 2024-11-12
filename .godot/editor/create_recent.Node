@@ -1,11 +1,11 @@
+ShapeCast3D
+Node3D
 MeshInstance3D
 WorldEnvironment
 Sprite3D
-Node3D
 Label3D
 TextEdit
 AudioStreamPlayer
-ShapeCast3D
 CollisionShape3D
 StaticBody3D
 CharacterBody3D

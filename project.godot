@@ -57,6 +57,8 @@ place={
 [physics]
 
 common/physics_ticks_per_second=120
+common/max_physics_steps_per_frame=100
+common/physics_jitter_fix=1.0
 3d/physics_engine="GodotPhysics3D"
 3d/solver/solver_iterations=1
 

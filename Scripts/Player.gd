@@ -3,7 +3,7 @@ class_name Player
 
 @export var default_gravity : float = 0.05
 @export var jump_vel : float = 1.5
-@export var default_x_vel : float = 0.006
+@export var default_x_vel : float = 0.0061
 @export var rotate_speed : float = 3
 
 @onready var down_raycast = $down_cast
@@ -13,6 +13,9 @@ class_name Player
 @onready var mesh = $mesh_transform
 @onready var current_gravity : float = default_gravity
 var consumed_buffer = false # this becomes consumed when the player clicks on a jump block, they need to click again to reset
+var speed_multiplier = 1
+
+@onready var xPos = position.x
 
 func _ready() -> void:
 	manager_singleton.instance().player = self
@@ -20,12 +23,15 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	_tick_input()
 	_tick_gravity()
-	_tick_scroll()
 	_tick_die()
 	_tick_rotation()
+	_tick_scroll()
+	print(xPos)
 
 func _tick_scroll():
-	position.x += default_x_vel
+	xPos += speed_multiplier * default_x_vel
+	position.x = xPos
+
 func _tick_gravity():
 	linear_velocity.y -= current_gravity
 

@@ -6,6 +6,8 @@ func _physics_process(delta: float) -> void:
 			action_0()
 		elif action_number == 1:
 			action_1()
+		elif action_number == 2: 
+			action_2()
 
 func action_0():
 	manager_singleton.instance().player._player_died()
@@ -14,3 +16,7 @@ func action_1():
 		manager_singleton.instance().player._jump()
 		manager_singleton.instance().player.consumed_buffer = true # consume the buffer
 		action_number = -1 # dissable this interactable
+
+func action_2():
+	manager_singleton.instance().player.speed_multiplier = 1.5
+	action_number = -1

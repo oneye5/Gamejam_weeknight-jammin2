@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cl14twedp5qi1"]
+[gd_scene load_steps=8 format=3 uid="uid://cl14twedp5qi1"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_2on0x"]
 [ext_resource type="ArrayMesh" uid="uid://c267m8nho5yg4" path="res://Assets/Visuals/square-hq-brick-1x1-round.obj" id="1_sgm1h"]
 [ext_resource type="Material" uid="uid://bfflcrngmmwxl" path="res://Assets/materials/standard_base.tres" id="2_6jjfp"]
+[ext_resource type="AudioStream" uid="uid://cr5p3vlcp4hgs" path="res://Assets/Sounds/1366300_-Rampart-.mp3" id="4_c5u5s"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p6xwp"]
 friction = 0.0
@@ -50,3 +51,7 @@ transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 0, -0.0215448, 0.000
 shape = SubResource("CapsuleShape3D_luiln")
 
 [node name="child_bricks" type="Node3D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_c5u5s")
+autoplay = true
