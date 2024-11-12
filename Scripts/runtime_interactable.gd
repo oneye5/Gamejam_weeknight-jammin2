@@ -8,6 +8,8 @@ func _physics_process(delta: float) -> void:
 			action_1()
 		elif action_number == 2: 
 			action_2()
+		elif action_number == 3:
+			action_3()
 
 func action_0():
 	manager_singleton.instance().player._player_died()
@@ -20,3 +22,10 @@ func action_1():
 func action_2():
 	manager_singleton.instance().player.speed_multiplier = 1.5
 	action_number = -1
+
+func action_3():
+	if Input.is_action_pressed("jump") and not manager_singleton.instance().player.consumed_buffer:
+		manager_singleton.instance().player._jump()
+		manager_singleton.instance().player.consumed_buffer = true # consume the buffer
+		manager_singleton.instance().player.gravity_flipped = not manager_singleton.instance().player.gravity_flipped
+		action_number = -1

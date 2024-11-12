@@ -1,6 +1,6 @@
 extends Node3D
-
-@export var pos_lerp : float = 0.1
+@export var pos_lerp_y : float = 0.5
+@export var pos_lerp_x : float = 0.02
 var prev_pos : Vector3 = Vector3.ONE
 
 func _process(delta: float) -> void:
@@ -8,7 +8,8 @@ func _process(delta: float) -> void:
 	handle_rotate(delta)
 
 func lerp_pos() -> void:
-	position = lerp(position, prev_pos, pos_lerp)
+	position.x = lerp(position.x, prev_pos.x + 0.025 , pos_lerp_x) 
+	position.y = lerp(position.y, prev_pos.y , pos_lerp_y)
 	prev_pos = manager_singleton.instance().player.position
 
 func handle_rotate(delta) -> void:

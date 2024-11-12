@@ -14,7 +14,7 @@ class_name Player
 @onready var current_gravity : float = default_gravity
 var consumed_buffer = false # this becomes consumed when the player clicks on a jump block, they need to click again to reset
 var speed_multiplier = 1
-var gravity_flipped = true
+var gravity_flipped = false
 
 @onready var xPos = position.x
 

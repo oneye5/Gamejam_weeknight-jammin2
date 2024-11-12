@@ -16,3 +16,7 @@ res://Scripts/Player.gd
 res://Scripts/runtime_interactable.gd
 res://Scripts/player_body_lerper.gd
 res://Scripts/Camera_mover.gd
+res://Assets/materials/grav_swap.tres
+res://Scenes/level_components/1x1(grav_switch).tscn
+res://Scenes/UI.tscn
+res://Scripts/pause_menu.gd
