@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx5nliad27rt2"]
+
+[ext_resource type="ArrayMesh" uid="uid://88w0iijkwsov" path="res://Assets/Visuals/bevel-hq-brick-2x8.obj" id="1_u6aoe"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0mvbi"]
+friction = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jk4ki"]
+size = Vector3(0.64, 0.1, 0.15)
+
+[node name="2x8" type="MeshInstance3D"]
+mesh = ExtResource("1_u6aoe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_0mvbi")
+
+[node name="hitbox" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0500455, 0)
+shape = SubResource("BoxShape3D_jk4ki")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://do8pilnxoilin"
+path="res://.godot/imported/square-hq-brick-slope-corner-inside-inverted-2x2.obj-6a7065121c8fc50c54c75636b960bb7c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square-hq-brick-slope-corner-inside-inverted-2x2.obj-6a7065121c8fc50c54c75636b960bb7c.mesh"]
+
+source_file="res://Assets/Visuals/square-hq-brick-slope-corner-inside-inverted-2x2.obj"
+dest_files=["res://.godot/imported/square-hq-brick-slope-corner-inside-inverted-2x2.obj-6a7065121c8fc50c54c75636b960bb7c.mesh", "res://.godot/imported/square-hq-brick-slope-corner-inside-inverted-2x2.obj-6a7065121c8fc50c54c75636b960bb7c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

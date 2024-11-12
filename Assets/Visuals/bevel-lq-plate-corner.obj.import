@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dunlp6je0xh2j"
+path="res://.godot/imported/bevel-lq-plate-corner.obj-79627634219512ba8b0493920312b974.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bevel-lq-plate-corner.obj-79627634219512ba8b0493920312b974.mesh"]
+
+source_file="res://Assets/Visuals/bevel-lq-plate-corner.obj"
+dest_files=["res://.godot/imported/bevel-lq-plate-corner.obj-79627634219512ba8b0493920312b974.mesh", "res://.godot/imported/bevel-lq-plate-corner.obj-79627634219512ba8b0493920312b974.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

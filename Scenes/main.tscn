@@ -1,3 +1,62 @@
-[gd_scene format=3 uid="uid://c67u73shw4lvr"]
+[gd_scene load_steps=6 format=3 uid="uid://c67u73shw4lvr"]
+
+[ext_resource type="PackedScene" uid="uid://cl14twedp5qi1" path="res://Scenes/Player.tscn" id="1_qrdgo"]
+[ext_resource type="Script" path="res://Scripts/Camera_mover.gd" id="2_f3jm4"]
+[ext_resource type="PackedScene" uid="uid://cx5nliad27rt2" path="res://Scenes/2x8.tscn" id="3_ivs0n"]
+[ext_resource type="PackedScene" uid="uid://darlxjlsla6d7" path="res://Scenes/2x2.tscn" id="4_sac78"]
+[ext_resource type="PackedScene" uid="uid://ca1wn3p4tpc2x" path="res://Scenes/1x1(spike).tscn" id="5_phgk8"]
 
 [node name="Main" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_qrdgo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.996192, 0.0871905, 0, -0.0871905, 0.996192, 0, 0.244883, 2.57578)
+fov = 19.4521
+script = ExtResource("2_f3jm4")
+
+[node name="misc" type="Node3D" parent="."]
+
+[node name="Lighting" type="Node3D" parent="misc"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="misc/Lighting"]
+transform = Transform3D(0.836076, -0.489404, 0.247913, 0, 0.45189, 0.892074, -0.548614, -0.745841, 0.377814, 0, 0, 0)
+light_energy = 2.616
+
+[node name="Ground" type="Node3D" parent="misc"]
+
+[node name="2x8_1" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68, -0.08, 0)
+
+[node name="2x8_2" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.04, -0.08, 0)
+
+[node name="2x8_3" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, -0.08, 0)
+
+[node name="2x8_4" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, -0.08, 0)
+
+[node name="2x8_5" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24, -0.08, 0)
+
+[node name="2x8_6" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88, -0.08, 0)
+
+[node name="2x8_7" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52, -0.08, 0)
+
+[node name="2x8_8" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16, -0.08, 0)
+
+[node name="2x8_9" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, -0.08, 0)
+
+[node name="2x8" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08, 0, 0)
+
+[node name="2x9" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73711, 0.0200455, 0.00474685)
+
+[node name="0_08 snapping" type="Node3D" parent="."]

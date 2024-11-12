@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c24bpjn8ht4ox"
+path="res://.godot/imported/square-lq-brick-1x6.obj-7ecaba0bed1aa8b50a76bc9ffbd54053.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square-lq-brick-1x6.obj-7ecaba0bed1aa8b50a76bc9ffbd54053.mesh"]
+
+source_file="res://Assets/Visuals/square-lq-brick-1x6.obj"
+dest_files=["res://.godot/imported/square-lq-brick-1x6.obj-7ecaba0bed1aa8b50a76bc9ffbd54053.mesh", "res://.godot/imported/square-lq-brick-1x6.obj-7ecaba0bed1aa8b50a76bc9ffbd54053.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

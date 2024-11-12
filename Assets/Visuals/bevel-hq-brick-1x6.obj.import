@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b782h1yit5lgw"
+path="res://.godot/imported/bevel-hq-brick-1x6.obj-a5e1e165fcdd2fdcaad7634c0526394e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bevel-hq-brick-1x6.obj-a5e1e165fcdd2fdcaad7634c0526394e.mesh"]
+
+source_file="res://Assets/Visuals/bevel-hq-brick-1x6.obj"
+dest_files=["res://.godot/imported/bevel-hq-brick-1x6.obj-a5e1e165fcdd2fdcaad7634c0526394e.mesh", "res://.godot/imported/bevel-hq-brick-1x6.obj-a5e1e165fcdd2fdcaad7634c0526394e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

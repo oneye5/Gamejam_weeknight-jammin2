@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://clrsrcvg0d26x"
+path="res://.godot/imported/bevel-lq-brick-corner.obj-44f836a471f63e38a15e75b82ae67d8d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bevel-lq-brick-corner.obj-44f836a471f63e38a15e75b82ae67d8d.mesh"]
+
+source_file="res://Assets/Visuals/bevel-lq-brick-corner.obj"
+dest_files=["res://.godot/imported/bevel-lq-brick-corner.obj-44f836a471f63e38a15e75b82ae67d8d.mesh", "res://.godot/imported/bevel-lq-brick-corner.obj-44f836a471f63e38a15e75b82ae67d8d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

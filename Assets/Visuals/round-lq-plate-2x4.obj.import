@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dhbrwovrrjflo"
+path="res://.godot/imported/round-lq-plate-2x4.obj-64dcc09b34e47eecb73d18a8eee44bda.mesh"
+
+[deps]
+
+files=["res://.godot/imported/round-lq-plate-2x4.obj-64dcc09b34e47eecb73d18a8eee44bda.mesh"]
+
+source_file="res://Assets/Visuals/round-lq-plate-2x4.obj"
+dest_files=["res://.godot/imported/round-lq-plate-2x4.obj-64dcc09b34e47eecb73d18a8eee44bda.mesh", "res://.godot/imported/round-lq-plate-2x4.obj-64dcc09b34e47eecb73d18a8eee44bda.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

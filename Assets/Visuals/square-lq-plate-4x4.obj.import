@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cgxfj4gutdiev"
+path="res://.godot/imported/square-lq-plate-4x4.obj-08aebb6854af53f9d38d4db754a2697d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square-lq-plate-4x4.obj-08aebb6854af53f9d38d4db754a2697d.mesh"]
+
+source_file="res://Assets/Visuals/square-lq-plate-4x4.obj"
+dest_files=["res://.godot/imported/square-lq-plate-4x4.obj-08aebb6854af53f9d38d4db754a2697d.mesh", "res://.godot/imported/square-lq-plate-4x4.obj-08aebb6854af53f9d38d4db754a2697d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

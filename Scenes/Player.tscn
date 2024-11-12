@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://cl14twedp5qi1"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_2on0x"]
+[ext_resource type="ArrayMesh" uid="uid://c267m8nho5yg4" path="res://Assets/Visuals/square-hq-brick-1x1-round.obj" id="1_sgm1h"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p6xwp"]
+friction = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q7svt"]
+size = Vector3(0.265625, 1, 0.167799)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iea2b"]
+size = Vector3(0.345, 0.785, 0.03)
+
+[node name="Player" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_p6xwp")
+gravity_scale = 0.0
+script = ExtResource("1_2on0x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = ExtResource("1_sgm1h")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 0, 0, 0.000337217)
+shape = SubResource("BoxShape3D_q7svt")
+
+[node name="down_cast" type="RayCast3D" parent="RigidBody3D"]
+target_position = Vector3(0, -0.07, 0)
+
+[node name="up_cast" type="RayCast3D" parent="RigidBody3D"]
+target_position = Vector3(0, 0.07, 0)
+
+[node name="hurtbox" type="ShapeCast3D" parent="RigidBody3D"]
+transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 0, 0, 0.000337217)
+shape = SubResource("BoxShape3D_iea2b")
+target_position = Vector3(0, 0, 0)

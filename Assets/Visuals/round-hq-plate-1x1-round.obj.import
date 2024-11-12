@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bf32u00snorkt"
+path="res://.godot/imported/round-hq-plate-1x1-round.obj-3c70c8b63f3d4fa321c9e084e46ea652.mesh"
+
+[deps]
+
+files=["res://.godot/imported/round-hq-plate-1x1-round.obj-3c70c8b63f3d4fa321c9e084e46ea652.mesh"]
+
+source_file="res://Assets/Visuals/round-hq-plate-1x1-round.obj"
+dest_files=["res://.godot/imported/round-hq-plate-1x1-round.obj-3c70c8b63f3d4fa321c9e084e46ea652.mesh", "res://.godot/imported/round-hq-plate-1x1-round.obj-3c70c8b63f3d4fa321c9e084e46ea652.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

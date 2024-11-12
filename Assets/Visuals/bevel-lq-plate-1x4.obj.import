@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bq1viujt7f1nl"
+path="res://.godot/imported/bevel-lq-plate-1x4.obj-cdd28177c33e172c6e8357e171d38667.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bevel-lq-plate-1x4.obj-cdd28177c33e172c6e8357e171d38667.mesh"]
+
+source_file="res://Assets/Visuals/bevel-lq-plate-1x4.obj"
+dest_files=["res://.godot/imported/bevel-lq-plate-1x4.obj-cdd28177c33e172c6e8357e171d38667.mesh", "res://.godot/imported/bevel-lq-plate-1x4.obj-cdd28177c33e172c6e8357e171d38667.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

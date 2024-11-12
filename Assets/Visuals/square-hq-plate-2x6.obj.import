@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dg5r57ayjy68c"
+path="res://.godot/imported/square-hq-plate-2x6.obj-dc434518d45bdd7e95294782da3eeeef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square-hq-plate-2x6.obj-dc434518d45bdd7e95294782da3eeeef.mesh"]
+
+source_file="res://Assets/Visuals/square-hq-plate-2x6.obj"
+dest_files=["res://.godot/imported/square-hq-plate-2x6.obj-dc434518d45bdd7e95294782da3eeeef.mesh", "res://.godot/imported/square-hq-plate-2x6.obj-dc434518d45bdd7e95294782da3eeeef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

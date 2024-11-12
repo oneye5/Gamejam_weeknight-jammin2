@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvqlasvmtpyg"
+path="res://.godot/imported/square-lq-plate-1x6.obj-4e25250893855205dadb23adfd9495b6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square-lq-plate-1x6.obj-4e25250893855205dadb23adfd9495b6.mesh"]
+
+source_file="res://Assets/Visuals/square-lq-plate-1x6.obj"
+dest_files=["res://.godot/imported/square-lq-plate-1x6.obj-4e25250893855205dadb23adfd9495b6.mesh", "res://.godot/imported/square-lq-plate-1x6.obj-4e25250893855205dadb23adfd9495b6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

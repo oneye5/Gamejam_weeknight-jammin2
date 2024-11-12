@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b82ehnalhrbjk"
+path="res://.godot/imported/bevel-hq-brick-slope-1x2.obj-513bcf856f302c6e20ce1f3f4e134646.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bevel-hq-brick-slope-1x2.obj-513bcf856f302c6e20ce1f3f4e134646.mesh"]
+
+source_file="res://Assets/Visuals/bevel-hq-brick-slope-1x2.obj"
+dest_files=["res://.godot/imported/bevel-hq-brick-slope-1x2.obj-513bcf856f302c6e20ce1f3f4e134646.mesh", "res://.godot/imported/bevel-hq-brick-slope-1x2.obj-513bcf856f302c6e20ce1f3f4e134646.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

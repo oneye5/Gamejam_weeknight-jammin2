@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dl5kleenqlb6g"
+path="res://.godot/imported/none-lq-brick-slope-inverted-1x2.obj-b4e3bb4cc2d3753089f28d64de81a672.mesh"
+
+[deps]
+
+files=["res://.godot/imported/none-lq-brick-slope-inverted-1x2.obj-b4e3bb4cc2d3753089f28d64de81a672.mesh"]
+
+source_file="res://Assets/Visuals/none-lq-brick-slope-inverted-1x2.obj"
+dest_files=["res://.godot/imported/none-lq-brick-slope-inverted-1x2.obj-b4e3bb4cc2d3753089f28d64de81a672.mesh", "res://.godot/imported/none-lq-brick-slope-inverted-1x2.obj-b4e3bb4cc2d3753089f28d64de81a672.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

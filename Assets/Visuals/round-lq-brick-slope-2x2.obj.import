@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4v4g100113l0"
+path="res://.godot/imported/round-lq-brick-slope-2x2.obj-86b9038ca7ff9cb50bc2ccf083f83d3e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/round-lq-brick-slope-2x2.obj-86b9038ca7ff9cb50bc2ccf083f83d3e.mesh"]
+
+source_file="res://Assets/Visuals/round-lq-brick-slope-2x2.obj"
+dest_files=["res://.godot/imported/round-lq-brick-slope-2x2.obj-86b9038ca7ff9cb50bc2ccf083f83d3e.mesh", "res://.godot/imported/round-lq-brick-slope-2x2.obj-86b9038ca7ff9cb50bc2ccf083f83d3e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://be3ynmvd1mfui"
+path="res://.godot/imported/none-lq-plate-4x6.obj-3737b7c7bfd7d0fdd3cb472cac1dd79d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/none-lq-plate-4x6.obj-3737b7c7bfd7d0fdd3cb472cac1dd79d.mesh"]
+
+source_file="res://Assets/Visuals/none-lq-plate-4x6.obj"
+dest_files=["res://.godot/imported/none-lq-plate-4x6.obj-3737b7c7bfd7d0fdd3cb472cac1dd79d.mesh", "res://.godot/imported/none-lq-plate-4x6.obj-3737b7c7bfd7d0fdd3cb472cac1dd79d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

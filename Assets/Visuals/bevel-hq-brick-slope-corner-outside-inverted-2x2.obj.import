@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dav36ksdpn2q4"
+path="res://.godot/imported/bevel-hq-brick-slope-corner-outside-inverted-2x2.obj-d807642ebb2cb691c5c11f49cb54801a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bevel-hq-brick-slope-corner-outside-inverted-2x2.obj-d807642ebb2cb691c5c11f49cb54801a.mesh"]
+
+source_file="res://Assets/Visuals/bevel-hq-brick-slope-corner-outside-inverted-2x2.obj"
+dest_files=["res://.godot/imported/bevel-hq-brick-slope-corner-outside-inverted-2x2.obj-d807642ebb2cb691c5c11f49cb54801a.mesh", "res://.godot/imported/bevel-hq-brick-slope-corner-outside-inverted-2x2.obj-d807642ebb2cb691c5c11f49cb54801a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c4w5evp2oblo6"
+path="res://.godot/imported/square-lq-brick-slope-1x2.obj-7ddb0e5d5ee48477e19a79ebbff12c2c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square-lq-brick-slope-1x2.obj-7ddb0e5d5ee48477e19a79ebbff12c2c.mesh"]
+
+source_file="res://Assets/Visuals/square-lq-brick-slope-1x2.obj"
+dest_files=["res://.godot/imported/square-lq-brick-slope-1x2.obj-7ddb0e5d5ee48477e19a79ebbff12c2c.mesh", "res://.godot/imported/square-lq-brick-slope-1x2.obj-7ddb0e5d5ee48477e19a79ebbff12c2c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
