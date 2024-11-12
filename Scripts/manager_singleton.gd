@@ -13,7 +13,7 @@ static func instance() -> manager_singleton:
 	return Engine.get_singleton("manager_singleton")
 
 func _ready():
-	_init()
+	pass
 
 
 func _get_tree(): # returns the scene tree

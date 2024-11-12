@@ -11,3 +11,5 @@ res://Scenes/level_components/1x1(spike).tscn
 res://Scenes/spawned_block.tscn
 res://Scenes/level_components/2x2_bevel.tscn
 res://Scenes/level_components/1x1(JUMP).tscn
+res://Scripts/manager_singleton.gd
+res://Scenes/background.tscn

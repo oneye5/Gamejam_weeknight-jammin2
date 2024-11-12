@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cl14twedp5qi1"]
+[gd_scene load_steps=7 format=3 uid="uid://cl14twedp5qi1"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_2on0x"]
 [ext_resource type="ArrayMesh" uid="uid://c267m8nho5yg4" path="res://Assets/Visuals/square-hq-brick-1x1-round.obj" id="1_sgm1h"]
+[ext_resource type="Material" uid="uid://bfflcrngmmwxl" path="res://Assets/materials/standard_base.tres" id="2_6jjfp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p6xwp"]
 friction = 0.0
@@ -41,6 +42,7 @@ target_position = Vector3(0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/mesh_transform"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+material_override = ExtResource("2_6jjfp")
 mesh = ExtResource("1_sgm1h")
 skeleton = NodePath("../../..")
 
