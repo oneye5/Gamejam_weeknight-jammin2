@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://btqaoeie6172h"]
+
+[ext_resource type="ArrayMesh" uid="uid://cqr0xetctw5qv" path="res://Assets/Visuals/bevel-hq-brick-1x1.obj" id="1_eppvk"]
+[ext_resource type="Material" uid="uid://cw6a7knankwtv" path="res://Assets/materials/air_jump.tres" id="2_ragcd"]
+[ext_resource type="Script" path="res://Scripts/runtime_interactable.gd" id="3_6q74w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ubgh0"]
+size = Vector3(0.25, 0.25, 0.015)
+
+[node name="2x8" type="MeshInstance3D"]
+mesh = ExtResource("1_eppvk")
+surface_material_override/0 = ExtResource("2_ragcd")
+
+[node name="Hurtbox" type="ShapeCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.032, 0)
+shape = SubResource("BoxShape3D_ubgh0")
+target_position = Vector3(0, 0, 0)
+collision_mask = 2
+script = ExtResource("3_6q74w")
+action_number = 1

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx5j8lycml7r2"]
+
+[ext_resource type="ArrayMesh" uid="uid://bxuouyn5n4c1h" path="res://Assets/Visuals/bevel-hq-plate-2x2.obj" id="1_lyerd"]
+[ext_resource type="Material" uid="uid://bfflcrngmmwxl" path="res://Assets/materials/standard_base.tres" id="2_1xnon"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0mvbi"]
+friction = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jk4ki"]
+size = Vector3(0.16, 0.032, 0.15)
+
+[node name="2x2" type="MeshInstance3D"]
+mesh = ExtResource("1_lyerd")
+surface_material_override/0 = ExtResource("2_1xnon")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_0mvbi")
+
+[node name="hitbox" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49012e-08, 0.0160455, 0)
+shape = SubResource("BoxShape3D_jk4ki")

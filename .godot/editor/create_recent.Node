@@ -1,4 +1,7 @@
 Node3D
+Label3D
+TextEdit
+AudioStreamPlayer
 ShapeCast3D
 CollisionShape3D
 StaticBody3D
@@ -9,4 +12,3 @@ DirectionalLight3D
 Camera3D
 Camera2D
 RigidBody3D
-RigidBody2D
