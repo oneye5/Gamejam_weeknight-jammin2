@@ -57,6 +57,7 @@ place={
 
 common/physics_ticks_per_second=120
 3d/physics_engine="GodotPhysics3D"
+3d/solver/solver_iterations=1
 
 [rendering]
 
