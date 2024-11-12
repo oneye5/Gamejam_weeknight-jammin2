@@ -1,7 +1,5 @@
 extends Node3D
-@export var pos_lerp_y : float = 0.3
-@export var pos_lerp_x : float = 0.01
-@export var acceptable_distance = 0.01
+@export var acceptable_distance = 0.02
 var prev_pos : Vector3 = Vector3.ONE
 
 func _process(delta: float) -> void:
@@ -10,12 +8,14 @@ func _process(delta: float) -> void:
 
 func lerp_pos() -> void:
 	prev_pos = manager_singleton.instance().player.position
+	
 	var xDist = abs(position.x - prev_pos.x)
-	var scale_factor = max(0.1,1.0 - (acceptable_distance / xDist)) * 2.0
-	print(xDist)
-	print("scale factor : " + str(scale_factor))
-	position.x = lerp(position.x, prev_pos.x + 0.08 , pos_lerp_x * scale_factor) 
-	position.y = lerp(position.y, prev_pos.y , pos_lerp_y)
+	var yDist = abs(position.y - prev_pos.y)
+	var scale_factor_x = max(0.01,1.0 - (acceptable_distance / xDist)) / 1.5 # this does not need to be exact
+	var scale_factor_y = max(0.01,1.0 - (acceptable_distance / xDist)) * 1.5 # it is nice when this is responsive
+	
+	position.x = lerp(position.x, prev_pos.x + acceptable_distance,  scale_factor_x) 
+	position.y = lerp(position.y, prev_pos.y , scale_factor_y)
 
 func handle_rotate(delta) -> void:
 	if manager_singleton.instance().player.down_raycast.is_colliding():

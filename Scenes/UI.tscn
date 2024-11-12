@@ -61,20 +61,31 @@ grow_vertical = 0
 text = "song:
 Rampart - Waterflame"
 
+[node name="Label4" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -204.0
+offset_top = -2.0
+offset_right = -13.0
+offset_bottom = 203.0
+grow_horizontal = 0
+text = "note:
+hardware acceleration settings in your browser are reccomended to be on for this game. You may get poor performance otherwise."
+autowrap_mode = 3
+
 [node name="Label3" type="Label" parent="CanvasLayer"]
 offset_left = 6.0
 offset_top = 11.0
 offset_right = 197.0
-offset_bottom = 112.0
+offset_bottom = 398.0
 text = "Controls:
 	left click   - jump
 	right click - place brick
 	escape      - pause
 
 
-
-note:
-hardware acceleration settings in your browser are reccomended to be on for this game. You may get poor performance otherwise."
+"
 autowrap_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
