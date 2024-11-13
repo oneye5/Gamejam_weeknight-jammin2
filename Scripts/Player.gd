@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 	_tick_die()
 	_tick_scroll()
 	_tick_grav_flip()
-
+	print(position)
 
 func _tick_scroll():
 	xPos += speed_multiplier * default_x_vel
