@@ -2,6 +2,7 @@ res://Scenes/main.tscn
 res://Assets/materials/standard_base.tres
 res://Assets/materials/bad.tres
 res://Assets/materials/air_jump.tres
+res://Assets/materials/grav_swap.tres
 res://Scenes/Player.tscn
 res://Scenes/level_components/2x6.tscn
 res://Scenes/level_components/2x4.tscn
@@ -12,11 +13,5 @@ res://Scenes/spawned_block.tscn
 res://Scenes/level_components/2x2_bevel.tscn
 res://Scenes/level_components/1x1(JUMP).tscn
 res://Scenes/background.tscn
-res://Scripts/Player.gd
-res://Scripts/runtime_interactable.gd
-res://Scripts/player_body_lerper.gd
-res://Scripts/Camera_mover.gd
-res://Assets/materials/grav_swap.tres
 res://Scenes/level_components/1x1(grav_switch).tscn
 res://Scenes/UI.tscn
-res://Scripts/pause_menu.gd
