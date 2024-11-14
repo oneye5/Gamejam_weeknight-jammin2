@@ -20,6 +20,7 @@ func action_1():
 		manager_singleton.instance().player._jump()
 		manager_singleton.instance().player.consumed_buffer = true # consume the buffer
 		action_number = -1 # dissable this interactable
+		manager_singleton.instance()._spawn_explosion(manager_singleton.instance().player.position,1)
 
 func action_2():
 	manager_singleton.instance().player.speed_multiplier = 1.5
@@ -31,7 +32,8 @@ func action_3():
 		manager_singleton.instance().player.consumed_buffer = true # consume the buffer
 		manager_singleton.instance().player.gravity_flipped = not manager_singleton.instance().player.gravity_flipped
 		action_number = -1
-	
+		manager_singleton.instance()._spawn_explosion(manager_singleton.instance().player.position,1)
+
 func action_4():
 	manager_singleton.instance().player.speed_multiplier = 0
 	action_number = -1

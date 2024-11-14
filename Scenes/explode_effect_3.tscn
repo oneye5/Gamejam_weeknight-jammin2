@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://critt281vdvs0"]
+[gd_scene load_steps=6 format=3 uid="uid://hn60maqgu08o"]
 
-[ext_resource type="Material" uid="uid://dhvkv4xe41gwx" path="res://Assets/materials/particle_2.tres" id="1_r1of7"]
-[ext_resource type="ArrayMesh" uid="uid://ccn06r44x7861" path="res://Assets/Visuals/bevel-hq-brick-1x1-round.obj" id="2_begk8"]
-[ext_resource type="Script" path="res://Scripts/particle_manager.gd" id="3_2mg55"]
+[ext_resource type="Material" uid="uid://masdojs7tqhv" path="res://Assets/materials/particle_3.tres" id="1_kvofa"]
+[ext_resource type="ArrayMesh" uid="uid://ccn06r44x7861" path="res://Assets/Visuals/bevel-hq-brick-1x1-round.obj" id="2_d3guw"]
+[ext_resource type="Script" path="res://Scripts/particle_manager.gd" id="3_vkqja"]
 
 [sub_resource type="Curve" id="Curve_wo2eh"]
 min_value = -5.0
@@ -17,7 +17,7 @@ point_count = 2
 [node name="ExplodeEffect" type="Node3D"]
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
-material_override = ExtResource("1_r1of7")
+material_override = ExtResource("1_kvofa")
 gi_mode = 0
 emitting = false
 amount = 20
@@ -26,7 +26,7 @@ one_shot = true
 explosiveness = 0.89
 randomness = 0.16
 lifetime_randomness = 0.35
-mesh = ExtResource("2_begk8")
+mesh = ExtResource("2_d3guw")
 emission_shape = 1
 emission_sphere_radius = 0.1
 direction = Vector3(1, 1, 1)
@@ -35,4 +35,4 @@ radial_accel_max = 9.16
 radial_accel_curve = SubResource("Curve_wo2eh")
 scale_amount_curve = SubResource("Curve_vg7eo")
 hue_variation_max = 1.0
-script = ExtResource("3_2mg55")
+script = ExtResource("3_vkqja")

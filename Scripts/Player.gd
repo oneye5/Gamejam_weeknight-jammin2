@@ -61,6 +61,7 @@ func _place_block():
 	var new_block = block.instantiate()
 	new_block.position = block_pos
 	children_parent.add_child(new_block)
+	manager_singleton.instance()._spawn_explosion(block_pos,3)
 	
 
 func _tick_input():	
@@ -80,6 +81,7 @@ func _jump():
 		linear_velocity.y = -jump_vel
 
 func _player_died():
+	manager_singleton.instance()._spawn_explosion(position,2)
 	manager_singleton.instance().player_died()
 
 func _tick_grav_flip():

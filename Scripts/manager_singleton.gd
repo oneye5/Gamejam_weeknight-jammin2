@@ -20,3 +20,17 @@ func _get_tree(): # returns the scene tree
 	var main_loop = Engine.get_main_loop()
 	var tree = main_loop as SceneTree
 	return tree
+
+func _spawn_explosion(position : Vector3, type : int):
+	var obj = null
+	if type == 1:
+		obj = preload("res://Scenes/explode_effect.tscn")
+	if type == 2:
+		obj = preload("res://Scenes/explode_effect_2.tscn")
+	if type == 3:
+		obj = preload("res://Scenes/explode_effect_3.tscn")
+		
+		
+	var nobj = obj.instantiate()
+	nobj.position = position
+	instance().player.children_parent.add_child(nobj)
