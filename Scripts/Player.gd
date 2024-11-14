@@ -5,16 +5,20 @@ class_name Player
 @export var jump_vel : float = 1.5
 @export var default_x_vel : float = 0.0061
 @export var rotate_speed : float = 3
+@export var death_anim_time : float = 1.5
 
 @onready var visual_mesh = $"../Mesh_transform"
 @onready var down_raycast = $down_cast
 @onready var up_raycast = $up_cast
 @onready var hurtbox = $hurtbox
 @onready var children_parent = $"../child_bricks"
+@onready var percent_label = $"../Player_UI/percent"
 @onready var current_gravity : float = default_gravity
 var consumed_buffer = false # this becomes consumed when the player clicks on a jump block, they need to click again to reset
 var speed_multiplier = 1
 var gravity_flipped = false
+var dead = false
+@onready var remaining_death_anim_time = death_anim_time
 
 @onready var xPos = position.x
 
@@ -22,12 +26,16 @@ func _ready() -> void:
 	manager_singleton.instance().player = self
 
 func _physics_process(delta: float) -> void:
-	_tick_input()
-	_tick_gravity()
-	_tick_die()
-	_tick_scroll()
-	_tick_grav_flip()
-	print(position)
+	if not dead:
+		_tick_input()
+		_tick_gravity()
+		_tick_scroll()
+		_tick_grav_flip()
+		_tick_UI()
+	_tick_die(delta)
+
+func _tick_UI():
+	percent_label.text = str( round( (position.x/50.4) * 100.0 ) ) + " %"
 
 func _tick_scroll():
 	xPos += speed_multiplier * default_x_vel
@@ -39,8 +47,12 @@ func _tick_gravity():
 	else: 
 		linear_velocity.y += current_gravity
 
-func _tick_die():
-	if hurtbox.is_colliding():
+func _tick_die(delta):
+	if dead:
+		remaining_death_anim_time -= delta
+		if remaining_death_anim_time < 0:
+			manager_singleton.instance().player_died()
+	elif hurtbox.is_colliding():
 		_player_died()
 
 func _place_block():
@@ -81,8 +93,11 @@ func _jump():
 		linear_velocity.y = -jump_vel
 
 func _player_died():
+	if dead:
+		return
+	
+	dead = true
 	manager_singleton.instance()._spawn_explosion(position,2)
-	manager_singleton.instance().player_died()
 
 func _tick_grav_flip():
 	if gravity_flipped:
