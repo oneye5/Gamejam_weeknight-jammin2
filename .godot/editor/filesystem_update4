@@ -15,3 +15,8 @@ res://Scenes/level_components/1x1(JUMP).tscn
 res://Scenes/background.tscn
 res://Scenes/level_components/1x1(grav_switch).tscn
 res://Scenes/UI.tscn
+res://Assets/materials/ui_theme.tres
+res://Scenes/level_components/title.tscn
+res://Assets/materials/s3_base.tres
+res://Assets/materials/s5_base.tres
+res://Assets/materials/s4_base.tres

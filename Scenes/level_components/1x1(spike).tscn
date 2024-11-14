@@ -5,7 +5,7 @@
 [ext_resource type="Material" uid="uid://bg0uebbj7lr1a" path="res://Assets/materials/bad.tres" id="2_qg1gh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ubgh0"]
-size = Vector3(0.1, 0.025, 0.015)
+size = Vector3(0.04, 0.045, 0.025)
 
 [node name="2x8" type="MeshInstance3D"]
 mesh = ExtResource("1_i4l1r")

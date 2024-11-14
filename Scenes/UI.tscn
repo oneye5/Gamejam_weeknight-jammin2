@@ -1,18 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://dt7mxnoojefu3"]
+[gd_scene load_steps=10 format=3 uid="uid://dt7mxnoojefu3"]
 
 [ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_2tv50"]
+[ext_resource type="Theme" uid="uid://dtkfcgpoit2xj" path="res://Assets/materials/ui_theme.tres" id="2_ufr8f"]
 
-[sub_resource type="Gradient" id="Gradient_qvceq"]
-offsets = PackedFloat32Array(0, 0.986301)
-colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.4)
+[sub_resource type="Gradient" id="Gradient_sujaa"]
+offsets = PackedFloat32Array(0.182648, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0, 1, 0.483333, 0.0705882)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_joicp"]
-frequency = 0.0013
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_d3vym"]
+noise_type = 3
+frequency = 0.0021
+domain_warp_enabled = true
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_iflqc"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ebxuo"]
+color_ramp = SubResource("Gradient_sujaa")
+noise = SubResource("FastNoiseLite_d3vym")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7kk27"]
+blend_mode = 3
+
+[sub_resource type="Gradient" id="Gradient_abgyw"]
+offsets = PackedFloat32Array(0.872146, 1)
+colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ljrxe"]
+noise_type = 0
+frequency = 1.0
+domain_warp_enabled = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_p3jtm"]
 seamless = true
-color_ramp = SubResource("Gradient_qvceq")
-noise = SubResource("FastNoiseLite_joicp")
+color_ramp = SubResource("Gradient_abgyw")
+noise = SubResource("FastNoiseLite_ljrxe")
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -45,6 +64,7 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_ufr8f")
 text = "GAME PAUSED
 Press escape to unpause"
 horizontal_alignment = 1
@@ -58,20 +78,26 @@ offset_top = -73.0
 offset_right = 213.0
 offset_bottom = -24.0
 grow_vertical = 0
+theme = ExtResource("2_ufr8f")
 text = "song:
 Rampart - Waterflame"
 
 [node name="Label4" type="Label" parent="CanvasLayer"]
-anchors_preset = 1
+anchors_preset = 3
 anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
-offset_left = -204.0
-offset_top = -2.0
-offset_right = -13.0
-offset_bottom = 203.0
+anchor_bottom = 1.0
+offset_left = -382.0
+offset_top = -93.0
+offset_right = -9.0
+offset_bottom = -9.0
 grow_horizontal = 0
-text = "note:
-hardware acceleration settings in your browser are reccomended to be on for this game. You may get poor performance otherwise."
+grow_vertical = 0
+theme = ExtResource("2_ufr8f")
+text = "hardware acceleration settings in your browser are reccomended to be on for this game. You may get poor performance otherwise."
+horizontal_alignment = 2
+vertical_alignment = 2
 autowrap_mode = 3
 
 [node name="Label3" type="Label" parent="CanvasLayer"]
@@ -79,6 +105,7 @@ offset_left = 6.0
 offset_top = 11.0
 offset_right = 197.0
 offset_bottom = 398.0
+theme = ExtResource("2_ufr8f")
 text = "Controls:
 	left click   - jump
 	right click - place brick
@@ -94,4 +121,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("NoiseTexture2D_iflqc")
+texture = SubResource("NoiseTexture2D_ebxuo")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+material = SubResource("CanvasItemMaterial_7kk27")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_p3jtm")

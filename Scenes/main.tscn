@@ -1,12 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://c67u73shw4lvr"]
+[gd_scene load_steps=23 format=3 uid="uid://c67u73shw4lvr"]
 
 [ext_resource type="Script" path="res://Scripts/manager_singleton.gd" id="1_mbo0g"]
 [ext_resource type="PackedScene" uid="uid://cl14twedp5qi1" path="res://Scenes/Player.tscn" id="1_qrdgo"]
 [ext_resource type="Script" path="res://Scripts/Camera_mover.gd" id="2_f3jm4"]
 [ext_resource type="PackedScene" uid="uid://cx5nliad27rt2" path="res://Scenes/level_components/2x8.tscn" id="3_ivs0n"]
 [ext_resource type="PackedScene" uid="uid://darlxjlsla6d7" path="res://Scenes/level_components/2x2.tscn" id="4_sac78"]
+[ext_resource type="Material" uid="uid://d0dh2bxf2rnk4" path="res://Assets/materials/s5_base.tres" id="5_d05al"]
 [ext_resource type="PackedScene" uid="uid://ca1wn3p4tpc2x" path="res://Scenes/level_components/1x1(spike).tscn" id="5_phgk8"]
+[ext_resource type="Material" uid="uid://bjm4xrrs8ya68" path="res://Assets/materials/s4_base.tres" id="6_svsed"]
 [ext_resource type="PackedScene" uid="uid://cx5j8lycml7r2" path="res://Scenes/level_components/2x2_bevel.tscn" id="7_31ds3"]
+[ext_resource type="Material" uid="uid://hqjsav16uf7n" path="res://Assets/materials/s2_base.tres" id="7_p7tfm"]
+[ext_resource type="Material" uid="uid://bbo1wpmhiv0g1" path="res://Assets/materials/s3_base.tres" id="8_f4n7k"]
 [ext_resource type="PackedScene" uid="uid://btqaoeie6172h" path="res://Scenes/level_components/1x1(JUMP).tscn" id="8_j0dhg"]
 [ext_resource type="ArrayMesh" uid="uid://djtpgnxcefu3a" path="res://Assets/Visuals/bevel-hq-plate-2x4.obj" id="8_rrgv0"]
 [ext_resource type="PackedScene" uid="uid://cxhdc1ex0428k" path="res://Scenes/background.tscn" id="9_o72dw"]
@@ -14,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c7mu4ujqy3xr3" path="res://Scenes/level_components/2x4.tscn" id="10_oupys"]
 [ext_resource type="PackedScene" uid="uid://ce2huvlero1b" path="res://Scenes/level_components/1x1(grav_switch).tscn" id="11_h0s7t"]
 [ext_resource type="PackedScene" uid="uid://dt7mxnoojefu3" path="res://Scenes/UI.tscn" id="14_cs7p0"]
+[ext_resource type="PackedScene" uid="uid://d2a7ds8j6a0q1" path="res://Scenes/level_components/title.tscn" id="15_ilnte"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nv5p2"]
 transparency = 1
@@ -283,9 +288,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.256, -1.43943, 0)
 
 [node name="2x8_64" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.88, -0.97543, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_118" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.72, -1.29543, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_65" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.792, -0.86343, 0)
@@ -295,87 +302,129 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.848, -0.67143, 0)
 
 [node name="2x8_28" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.512, -0.575433, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_151" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.512, 0.208567, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_152" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.152, 0.208567, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_98" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.072, -0.671433, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x8_99" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.432, -0.671433, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_100" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.752, -0.767433, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x8_122" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.072, -0.863433, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x8_104" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.552, -0.767433, -0.00239396)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x8_49" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.475, -1.2097, -0.00185156)
 
 [node name="2x8_48" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.152, -0.575433, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x8_71" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.032, -0.67143, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_123" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.032, -0.67143, -0.16)
 
 [node name="2x8_124" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.032, -0.55943, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_125" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.392, -0.55943, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_126" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.392, -0.46343, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_127" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.032, -0.46343, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_128" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.768, -0.46343, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_129" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.208, -0.46343, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x8_200" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.032, -0.67143, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x8_201" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.392, -0.67143, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x8_202" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.768, -0.57543, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x8_203" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.208, -0.57543, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_130" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.208, -0.36743, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_131" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.208, -0.27143, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_132" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.208, -0.17543, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_142" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4, -0.07943, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_143" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4, 0.0165701, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_144" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4, 0.11257, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_145" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.04, -0.07943, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_146" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.04, 0.0165701, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_147" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.04, 0.11257, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_148" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.68, -0.07943, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_153" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.768, -0.73543, -0.16)
@@ -430,51 +479,67 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.408, -1.42343, -0.16)
 
 [node name="2x8_149" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.68, 0.0165701, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_150" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.68, 0.11257, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_141" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.208, -0.17543, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_133" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.848, -0.36743, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_134" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.848, -0.27143, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_135" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.848, -0.17543, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_136" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.392, -0.36743, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_137" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.392, -0.27143, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_138" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.392, -0.17543, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_139" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.032, -0.36743, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_140" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.032, -0.27143, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x8_114" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.728, -1.10343, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
 
 [node name="2x8_119" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.728, -1.19943, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
 
 [node name="2x8_120" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.728, -1.29543, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
 
 [node name="2x8_72" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.056, -0.527433, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x8_121" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.136, -0.927433, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x8" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28, 0.016, 0)
@@ -517,12 +582,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28, -1.04, 0.16)
 
 [node name="2x16" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88, 0.016, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x93" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88, 0.112, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x133" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84, -0.176, 0)
+
+[node name="2x555" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84, -0.176, -0.16)
 
 [node name="2x165" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.472, -0.56, 0)
@@ -595,21 +665,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.16, 0.688, -0.16)
 
 [node name="2x47" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.776, 0.144, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x130" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.776, 0.048, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x131" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.776, -0.064, -0.144)
 
 [node name="2x52" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.28, 0.016, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x53" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.28, 0.112, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x194" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.28, 0.208, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x242" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12, -0.48, 0)
@@ -664,21 +739,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.256, -0.288, 0)
 
 [node name="2x33" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.008, 0.032, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
+
+[node name="2x61" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.072, -0.064, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
+
+[node name="2x62" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.152, -0.16, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
+
+[node name="2x63" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.232, -0.256, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x34" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.008, 0.128, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x35" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.008, 0.224, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x36" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.008, 0.32, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x37" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.008, 0.416, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x38" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.008, 0.512, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x278" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.32, -0.496, 0)
@@ -724,6 +817,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.088, -0.768, 0)
 
 [node name="2x306" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.152, -0.768, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x118" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.392, -0.864, 0)
@@ -739,123 +833,163 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.872, -0.768, 0)
 
 [node name="2x202" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.112, -0.576, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x48" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.072, -0.48, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x58" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.792, -0.176, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x59" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.936, -0.176, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x60" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.08, -0.176, -0.16)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x309" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.896, -0.624, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x327" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.136, -0.624, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x328" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.056, -0.72, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x329" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.216, -0.72, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x310" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.376, -0.624, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x311" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.896, -0.72, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x312" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.376, -0.72, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x313" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.896, -0.816, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x314" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.376, -0.816, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x315" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.896, -0.912, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x316" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.376, -0.912, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x317" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.896, -1.008, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x318" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.376, -1.008, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x319" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.896, -1.104, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x320" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.376, -1.104, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x321" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.896, -1.2, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x322" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.376, -1.2, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x323" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.896, -1.296, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x324" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.376, -1.296, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x325" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.896, -1.392, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x448" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -0.96, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x449" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -1.056, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x450" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -1.152, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x451" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -1.248, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x452" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -1.344, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x453" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -1.44, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x454" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -1.536, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x455" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -1.632, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x456" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -1.728, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x457" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -1.824, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x458" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -1.92, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x459" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, -2.016, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x326" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.376, -1.392, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x49" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6289, -0.672, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x80" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4689, -0.672, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x69" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.384, -0.608, 0)
@@ -863,20 +997,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.384, -0.608, 0)
 [node name="2x240" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.384, -0.608, 0)
 
-[node name="2x122" parent="misc/Ground" instance=ExtResource("4_sac78")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.675, -0.792368, 0)
-
-[node name="2x126" parent="misc/Ground" instance=ExtResource("4_sac78")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.835, -0.792368, 0)
-
-[node name="2x127" parent="misc/Ground" instance=ExtResource("4_sac78")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.995, -0.792368, 0)
-
 [node name="2x70" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.544, -0.656, 0)
 
 [node name="2x90" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.456, -0.528, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x71" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9442, -1.16227, -0.00185156)
@@ -889,18 +1015,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.672, -1.024, 0)
 
 [node name="2x432" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.576, -1.28, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x433" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.056, -1.28, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x434" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.816, -1.28, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x435" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.576, -1.44, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x436" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.056, -1.456, 0)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x406" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.872, -1.328, -0.144)
@@ -979,96 +1110,129 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.688, -1.28, -0.144)
 
 [node name="2x438" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.688, -1.568, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x439" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.688, -1.472, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x440" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.688, -1.376, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x441" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.688, -1.84, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x442" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.688, -1.744, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x443" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.688, -1.648, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x444" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.688, -2.112, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x445" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.688, -2.016, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x446" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.688, -1.92, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x447" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.848, -1.28, -0.144)
 
 [node name="2x462" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.848, -1.568, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x463" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.848, -1.472, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x464" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.848, -1.376, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x465" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.848, -1.84, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x466" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.848, -1.744, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x467" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.848, -1.648, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x468" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.848, -2.112, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x469" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.848, -2.016, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x470" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.848, -1.92, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x471" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.976, -1.264, -0.144)
 
 [node name="2x472" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.976, -1.552, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x473" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.976, -1.456, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x474" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.976, -1.36, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x475" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.976, -1.824, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x476" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.976, -1.728, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x477" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.976, -1.632, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x478" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.976, -2.096, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x479" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.976, -2, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x480" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.976, -1.904, -0.144)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x407" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.512, -1.11148, 0)
 
 [node name="2x408" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.856, -1.20748, 0)
+
+[node name="2x557" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.016, -1.20748, 0)
+
+[node name="2x558" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.672, -1.11148, 0)
 
 [node name="2x396" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.672, -1.12, 0)
@@ -1234,90 +1398,119 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.08, -0.96, 0)
 
 [node name="2x255" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.52, -0.976, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x256" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.52, -1.072, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x262" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.92, -1.104, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x263" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.92, -1.2, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x264" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.92, -1.296, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x265" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.92, -1.392, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x266" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.92, -1.488, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x271" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.72, -1.392, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x272" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.72, -1.488, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x273" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.72, -1.584, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x274" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.72, -1.68, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x275" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.72, -1.776, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x267" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.52, -1.36, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x268" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.52, -1.456, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x257" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.52, -1.168, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x258" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.52, -1.264, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x259" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1.008, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x269" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3223, -0.944, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x276" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4823, -0.944, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x270" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3223, -1.072, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x277" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1063, -1.072, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x365" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7223, -1.072, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x366" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8023, -1.168, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x374" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9623, -1.168, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x375" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1063, -1.168, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x367" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4823, -1.168, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x373" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6423, -1.168, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x368" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3223, -1.168, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x260" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.856, -0.976, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x250" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.08, -1.056, 0)
@@ -1342,9 +1535,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.936, -0.192, 0)
 
 [node name="2x32" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.44, -0.88, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x75" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.6, -0.88, 0)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x10" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24, 0.016, 0)
@@ -1452,16 +1647,460 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05711, -0.187955, 0.0047468
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7531, -0.571955, 0.00474685)
 
 [node name="2x354" parent="misc/Ground" instance=ExtResource("5_phgk8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5051, -0.987955, 0.00474685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5051, -1.00396, 0.00474685)
 
 [node name="2x355" parent="misc/Ground" instance=ExtResource("5_phgk8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6491, -0.987955, 0.00474685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6491, -1.00396, 0.00474685)
 
 [node name="2x357" parent="misc/Ground" instance=ExtResource("5_phgk8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7931, -0.987955, 0.00474685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7931, -1.00396, 0.00474685)
 
 [node name="2x358" parent="misc/Ground" instance=ExtResource("5_phgk8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9531, -0.987955, 0.00474685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9531, -1.00396, 0.00474685)
+
+[node name="2x481" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5051, -1.38795, 0.00474685)
+
+[node name="2x482" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6491, -1.38795, 0.00474685)
+
+[node name="2x483" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7931, -1.38795, 0.00474685)
+
+[node name="2x563" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9531, -1.38795, 0.00474685)
+
+[node name="2x8_234" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.704, 0.24057, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_235" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.704, 0.14457, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_236" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.704, 0.0485702, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x564" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4811, 0.340045, 0.00474685)
+
+[node name="2x565" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6251, 0.340045, 0.00474685)
+
+[node name="2x566" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7691, 0.340045, 0.00474685)
+
+[node name="2x567" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9291, 0.340045, 0.00474685)
+
+[node name="2x568" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4811, -0.0439548, 0.00474685)
+
+[node name="2x569" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6251, -0.0439548, 0.00474685)
+
+[node name="2x570" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7691, -0.0439548, 0.00474685)
+
+[node name="2x571" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9291, -0.0439548, 0.00474685)
+
+[node name="2x8_237" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.864, 0.12857, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_238" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.864, 0.0325701, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_239" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.864, -0.0634299, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x572" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6411, 0.228045, 0.00474685)
+
+[node name="2x573" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7851, 0.228045, 0.00474685)
+
+[node name="2x574" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9291, 0.228045, 0.00474685)
+
+[node name="2x575" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0891, 0.228045, 0.00474685)
+
+[node name="2x576" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6411, -0.155955, 0.00474685)
+
+[node name="2x577" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7851, -0.155955, 0.00474685)
+
+[node name="2x578" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9291, -0.155955, 0.00474685)
+
+[node name="2x579" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0891, -0.155955, 0.00474685)
+
+[node name="2x8_240" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.312, 0.30457, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_241" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.312, 0.20857, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_242" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.312, 0.11257, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x580" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0891, 0.404045, 0.00474685)
+
+[node name="2x581" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2331, 0.404045, 0.00474685)
+
+[node name="2x582" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3771, 0.404045, 0.00474685)
+
+[node name="2x583" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5371, 0.404045, 0.00474685)
+
+[node name="2x584" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0891, 0.0200451, 0.00474685)
+
+[node name="2x585" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2331, 0.0200451, 0.00474685)
+
+[node name="2x586" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3771, 0.0200451, 0.00474685)
+
+[node name="2x587" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5371, 0.0200451, 0.00474685)
+
+[node name="2x8_243" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.136, -0.15943, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_244" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.136, -0.25543, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_245" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.136, -0.35143, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x588" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9131, -0.0599549, 0.00474685)
+
+[node name="2x589" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0571, -0.0599549, 0.00474685)
+
+[node name="2x590" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.2011, -0.0599549, 0.00474685)
+
+[node name="2x591" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3611, -0.0599549, 0.00474685)
+
+[node name="2x592" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9131, -0.443955, 0.00474685)
+
+[node name="2x593" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0571, -0.443955, 0.00474685)
+
+[node name="2x594" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.2011, -0.443955, 0.00474685)
+
+[node name="2x595" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3611, -0.443955, 0.00474685)
+
+[node name="2x8_246" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.336, -1.39143, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_247" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.336, -1.48743, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_248" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.336, -1.58343, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x596" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.1131, -1.29195, 0.00474685)
+
+[node name="2x597" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2571, -1.29195, 0.00474685)
+
+[node name="2x598" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4011, -1.29195, 0.00474685)
+
+[node name="2x599" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5611, -1.29195, 0.00474685)
+
+[node name="2x600" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.1131, -1.67595, 0.00474685)
+
+[node name="2x601" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2571, -1.67595, 0.00474685)
+
+[node name="2x602" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4011, -1.67595, 0.00474685)
+
+[node name="2x603" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5611, -1.67595, 0.00474685)
+
+[node name="2x8_249" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.752, -0.0314299, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_250" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.752, -0.12743, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_251" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.752, -0.22343, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x604" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5291, 0.068045, 0.00474685)
+
+[node name="2x605" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6731, 0.068045, 0.00474685)
+
+[node name="2x606" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8171, 0.068045, 0.00474685)
+
+[node name="2x607" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9771, 0.068045, 0.00474685)
+
+[node name="2x608" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5291, -0.315955, 0.00474685)
+
+[node name="2x609" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6731, -0.315955, 0.00474685)
+
+[node name="2x610" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8171, -0.315955, 0.00474685)
+
+[node name="2x611" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9771, -0.315955, 0.00474685)
+
+[node name="2x8_252" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.896, -0.0794299, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_253" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.896, -0.17543, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_254" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.896, -0.27143, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x612" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6731, 0.020045, 0.00474685)
+
+[node name="2x613" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8171, 0.020045, 0.00474685)
+
+[node name="2x614" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9611, 0.020045, 0.00474685)
+
+[node name="2x615" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1211, 0.020045, 0.00474685)
+
+[node name="2x616" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6731, -0.363955, 0.00474685)
+
+[node name="2x617" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8171, -0.363955, 0.00474685)
+
+[node name="2x618" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9611, -0.363955, 0.00474685)
+
+[node name="2x619" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1211, -0.363955, 0.00474685)
+
+[node name="2x8_255" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.064, 0.22457, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_256" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.064, 0.12857, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_257" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.064, 0.0325701, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x620" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8411, 0.324045, 0.00474685)
+
+[node name="2x621" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9851, 0.324045, 0.00474685)
+
+[node name="2x622" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1291, 0.324045, 0.00474685)
+
+[node name="2x623" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.2891, 0.324045, 0.00474685)
+
+[node name="2x624" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8411, -0.0599549, 0.00474685)
+
+[node name="2x625" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9851, -0.0599549, 0.00474685)
+
+[node name="2x626" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1291, -0.0599549, 0.00474685)
+
+[node name="2x627" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.2891, -0.0599549, 0.00474685)
+
+[node name="2x8_258" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.144, -1.15143, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_259" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.144, -1.24743, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_260" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.144, -1.34343, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x628" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9211, -1.05195, 0.00474685)
+
+[node name="2x629" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.0651, -1.05195, 0.00474685)
+
+[node name="2x630" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2091, -1.05195, 0.00474685)
+
+[node name="2x631" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.3691, -1.05195, 0.00474685)
+
+[node name="2x632" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9211, -1.43595, 0.00474685)
+
+[node name="2x633" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.0651, -1.43595, 0.00474685)
+
+[node name="2x634" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2091, -1.43595, 0.00474685)
+
+[node name="2x635" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.3691, -1.43595, 0.00474685)
+
+[node name="2x8_261" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.536, -1.15143, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_262" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.536, -1.24743, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_263" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.536, -1.34343, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x636" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.3131, -1.05195, 0.00474685)
+
+[node name="2x637" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.4571, -1.05195, 0.00474685)
+
+[node name="2x638" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.6011, -1.05195, 0.00474685)
+
+[node name="2x639" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7611, -1.05195, 0.00474685)
+
+[node name="2x640" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.3131, -1.43595, 0.00474685)
+
+[node name="2x641" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.4571, -1.43595, 0.00474685)
+
+[node name="2x642" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.6011, -1.43595, 0.00474685)
+
+[node name="2x643" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7611, -1.43595, 0.00474685)
+
+[node name="2x8_264" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.936, -0.83143, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_265" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.936, -0.92743, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_266" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.936, -1.02343, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x644" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7131, -0.731955, 0.00474685)
+
+[node name="2x645" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.8571, -0.731955, 0.00474685)
+
+[node name="2x646" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.0011, -0.731955, 0.00474685)
+
+[node name="2x647" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1611, -0.731955, 0.00474685)
+
+[node name="2x648" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.7131, -1.11595, 0.00474685)
+
+[node name="2x649" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.8571, -1.11595, 0.00474685)
+
+[node name="2x650" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.0011, -1.11595, 0.00474685)
+
+[node name="2x651" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1611, -1.11595, 0.00474685)
+
+[node name="2x8_267" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.56, 0.51257, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_268" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.56, 0.41657, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x8_269" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.56, 0.32057, 0)
+surface_material_override/0 = ExtResource("7_p7tfm")
+
+[node name="2x652" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.3371, 0.612045, 0.00474685)
+
+[node name="2x653" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4811, 0.612045, 0.00474685)
+
+[node name="2x654" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.6251, 0.612045, 0.00474685)
+
+[node name="2x655" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.7851, 0.612045, 0.00474685)
+
+[node name="2x656" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.3371, 0.228045, 0.00474685)
+
+[node name="2x657" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4811, 0.228045, 0.00474685)
+
+[node name="2x658" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.6251, 0.228045, 0.00474685)
+
+[node name="2x659" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.7851, 0.228045, 0.00474685)
 
 [node name="2x356" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24, 0, 0)
@@ -1472,56 +2111,199 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6331, -0.763955, 0.0047468
 [node name="2x284" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3211, -0.587955, 0.00474685)
 
+[node name="2x556" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.2331, -0.347955, 0.00474685)
+
 [node name="2x330" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.648, -0.24, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x331" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.648, -0.144, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x332" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.648, -0.048, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x333" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.648, 0.048, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x334" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.648, 0.144, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x335" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.648, 0.24, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x336" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.648, 0.336, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x337" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6491, -0.331955, 0.00474685)
 
+[node name="2x663" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.44, -0.496, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x664" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.44, -0.4, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x665" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.44, -0.304, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x666" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.44, -0.208, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x667" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.44, -0.112, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x668" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.44, -0.016, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x669" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.44, 0.08, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x670" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.4411, -0.587955, 0.00474685)
+
+[node name="2x671" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.24, 0.192, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x672" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.24, 0.288, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x673" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.24, 0.384, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x674" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.24, 0.48, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x675" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.24, 0.576, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x676" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.24, 0.672, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x677" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.24, 0.768, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x678" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2411, 0.100045, 0.00474685)
+
+[node name="2x679" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.88, 0.0160002, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x680" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.88, 0.112, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x681" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.88, 0.208, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x682" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.88, 0.304, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x683" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.88, 0.4, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x684" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.88, 0.496, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x685" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.88, 0.592, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x686" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8811, -0.0759549, 0.00474685)
+
+[node name="2x687" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.384, -0.192, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x688" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.384, -0.0959999, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x689" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.384, 8.9407e-08, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x690" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.384, 0.096, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x691" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.384, 0.192, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x692" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.384, 0.288, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x693" parent="misc/Ground" instance=ExtResource("4_sac78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.384, 0.384, 0)
+surface_material_override/0 = ExtResource("5_d05al")
+
+[node name="2x694" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.3851, -0.283955, 0.00474685)
+
 [node name="2x338" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, 0.032, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x339" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, 0.128, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x340" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, 0.224, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x341" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, 0.32, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x342" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, 0.416, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x343" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, 0.512, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x344" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.056, 0.608, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x460" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.536, 0.208, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x461" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.696, 0.208, 0)
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x345" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0571, -0.059955, 0.00474685)
@@ -1590,7 +2372,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5853, -1.06223, 0.00289529
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1453, -0.966229, 0.00289529)
 
 [node name="2x128" parent="misc/Ground" instance=ExtResource("5_phgk8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9931, -0.68396, 0.00474685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9931, -0.69996, 0.00474685)
 
 [node name="2x179" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3771, -0.57196, 0.00474685)
@@ -1600,6 +2382,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.7531, -0.20396, 0.00474685
 
 [node name="2x182" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.9131, -0.20396, 0.00474685)
+
+[node name="2x660" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.7451, -0.33196, 0.00474685)
 
 [node name="2x187" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2331, -0.53996, 0.00474685)
@@ -1621,27 +2406,124 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.755, -1.0177, -0.00185156)
 
 [node name="2x8_172" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.819, -1.1937, -0.00185156)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x8_173" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.819, -1.3697, -0.00185156)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x8_174" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.819, -1.5297, -0.00185156)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x8_54" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3202, -1.0977, -0.00185156)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x8_58" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8162, -1.0017, -0.00185156)
+surface_material_override/0 = ExtResource("8_f4n7k")
+
+[node name="2x8_204" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3522, -0.3617, -0.00185156)
+
+[node name="2x8_205" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8322, -0.2657, -0.00185156)
+
+[node name="2x8_206" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3122, -0.1697, -0.00185156)
+
+[node name="2x8_207" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3522, -0.3617, -0.177852)
+
+[node name="2x8_208" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8322, -0.2657, -0.177852)
+
+[node name="2x8_209" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3122, -0.1697, -0.177852)
+
+[node name="2x8_210" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3522, -0.4577, -0.177852)
+
+[node name="2x8_211" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8322, -0.3617, -0.177852)
+
+[node name="2x8_212" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3122, -0.2657, -0.177852)
+
+[node name="2x8_213" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3522, -0.5537, -0.177852)
+
+[node name="2x8_214" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8322, -0.4577, -0.177852)
+
+[node name="2x8_215" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3122, -0.3617, -0.177852)
+
+[node name="2x8_216" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3522, -0.6497, -0.177852)
+
+[node name="2x8_217" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8322, -0.5537, -0.177852)
+
+[node name="2x8_218" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3122, -0.4577, -0.177852)
+
+[node name="2x8_219" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3522, -0.7457, -0.177852)
+
+[node name="2x8_220" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8322, -0.6497, -0.177852)
+
+[node name="2x8_221" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3122, -0.5537, -0.177852)
+
+[node name="2x8_222" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3522, -0.8417, -0.177852)
+
+[node name="2x8_223" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8322, -0.7457, -0.177852)
+
+[node name="2x8_224" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3122, -0.6497, -0.177852)
+
+[node name="2x8_225" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3522, -0.9377, -0.177852)
+
+[node name="2x8_226" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8322, -0.8417, -0.177852)
+
+[node name="2x8_227" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3122, -0.7457, -0.177852)
+
+[node name="2x8_228" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3522, -1.0337, -0.177852)
+
+[node name="2x8_229" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8322, -0.9377, -0.177852)
+
+[node name="2x8_230" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3122, -0.8417, -0.177852)
+
+[node name="2x8_231" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3522, -1.1297, -0.177852)
+
+[node name="2x8_232" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8322, -1.0337, -0.177852)
+
+[node name="2x8_233" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3122, -0.9377, -0.177852)
 
 [node name="2x8_171" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9602, -1.0977, -0.00185156)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x8_170" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8162, -1.0017, 31.3421)
 
 [node name="2x8_59" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.4562, -1.0017, -0.00185156)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x8_60" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3442, -1.1617, -0.00185156)
@@ -1707,10 +2589,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3442, -1.7377, -0.00185156
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9842, -1.6417, -0.00185156)
 
 [node name="2x8_66" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.992, -1.07143, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.992, -1.03943, 0)
 
 [node name="2x8_67" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.632, -0.959433, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.632, -1.03943, 0)
+
+[node name="2x8_177" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.632, -0.94343, 0)
+
+[node name="2x8_178" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.272, -0.94343, 0)
+
+[node name="2x8_179" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.752, -0.79943, 0)
 
 [node name="2x8_70" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.272, -0.783433, 0)
@@ -1718,65 +2609,73 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.272, -0.783433, 0)
 [node name="2x8_73" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.272, -0.847433, 0)
 
-[node name="2x481" parent="misc/Ground" instance=ExtResource("4_sac78")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.675, -0.792368, -0.16)
-
-[node name="2x482" parent="misc/Ground" instance=ExtResource("4_sac78")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.835, -0.792368, -0.16)
-
-[node name="2x483" parent="misc/Ground" instance=ExtResource("4_sac78")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.995, -0.792368, -0.16)
-
 [node name="2x484" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9442, -1.16227, -0.161852)
 
 [node name="2x486" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.1202, -1.05027, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x489" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9602, -1.05027, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x490" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.6002, -1.05027, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x487" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2802, -1.05027, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x488" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.4402, -1.05027, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x491" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.1202, -0.95427, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x492" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9602, -0.95427, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x493" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.6002, -0.95427, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x494" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2802, -0.95427, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x495" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.4402, -0.95427, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x496" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.1202, -0.85827, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x497" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2802, -0.85827, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x499" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2802, -0.76227, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x498" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.4402, -0.85827, -0.161852)
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x8_175" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3442, -1.1617, -0.161852)
 
 [node name="2x8_176" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9842, -1.0657, -0.161852)
+
+[node name="2x8_180" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.7522, -1.0497, -0.129852)
 
 [node name="2x8_181" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9842, -0.9537, -0.161852)
@@ -1793,18 +2692,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9842, -0.6657, -0.161852)
 [node name="2x8_185" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9842, -0.5697, -0.161852)
 
-[node name="2x8_177" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.992, -1.07143, -0.16)
-
-[node name="2x8_178" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.632, -0.959433, -0.16)
-
-[node name="2x8_179" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.272, -0.783433, -0.16)
-
-[node name="2x8_180" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.272, -0.831433, -0.16)
-
 [node name="2x8_74" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.136, -0.671433, 0)
 
@@ -1812,12 +2699,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.136, -0.671433, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.048, -0.111433, 0)
 
 [node name="2x8_88" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.408, -0.111433, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.408, -0.015433, 0)
 
 [node name="2x8_87" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.688, -0.111433, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.688, -0.015433, 0)
 
 [node name="2x8_89" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.328, -0.111433, 0)
+
+[node name="2x8_92" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.048, -0.015433, 0)
+
+[node name="2x8_270" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.408, -0.111433, 0)
+
+[node name="2x8_271" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.688, -0.111433, 0)
+
+[node name="2x8_272" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.328, -0.207433, 0)
 
 [node name="2x8_90" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
@@ -1847,6 +2746,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.2091, -0.69996, 0.00474685
 [node name="2x224" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.6971, -0.23596, 0.00474685)
 
+[node name="2x695" parent="misc/Ground" instance=ExtResource("5_phgk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.9611, 0.22804, 0.00474685)
+
 [node name="2x8_94" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.608, -0.703433, 0)
 
@@ -1865,39 +2767,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.2, 0.128567, 0)
 [node name="2x8_106" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.432, -0.287433, 0)
 
-[node name="2x8_92" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.352, -0.639433, 0)
-
 [node name="2x14" parent="misc/Ground" instance=ExtResource("5_phgk8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95311, 0.0200455, 0.00474685)
 
 [node name="2x18" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29435, 0.130025, 0.0126185)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x148" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29435, 0.130025, -0.147382)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x19" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45435, 0.130025, 0.0126185)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x149" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45435, 0.130025, -0.131382)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x20" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.77435, 0.226025, 0.0126185)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x197" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03835, 0.178025, 0.0126185)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x150" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.77435, 0.226025, -0.115382)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x30" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.41435, -0.061975, 0.0126185)
@@ -1943,49 +2849,68 @@ skeleton = NodePath("../../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.9664, -0.237975, 0.0126185)
 skeleton = NodePath("../../..")
 
+[node name="2x661" parent="misc/Ground" instance=ExtResource("7_31ds3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5904, -0.573975, 0.0126185)
+skeleton = NodePath("../../..")
+
+[node name="2x662" parent="misc/Ground" instance=ExtResource("7_31ds3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4304, -0.573975, 0.0126185)
+skeleton = NodePath("../../..")
+
 [node name="2x113" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.99835, -0.909975, 0.0126185)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x116" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.83835, -0.877975, 0.0126185)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x261" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.856, -1.006, 0)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x199" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.67835, -0.845975, 0.0126185)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x210" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.35835, -0.813975, 0.0126185)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x117" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6384, -0.87798, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x236" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4944, -0.97398, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x237" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3344, -0.97398, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x200" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6384, -0.84598, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x238" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3984, -1.19798, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x239" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0384, -1.19798, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x206" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7904, -0.70198, -0.0033815)
@@ -1994,54 +2919,81 @@ skeleton = NodePath("../../..")
 [node name="2x293" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2544, -0.70198, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x294" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5904, -0.79798, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x295" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6464, -0.79798, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x296" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1904, -0.70198, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x297" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2624, -0.89398, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x298" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2304, -0.47798, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x301" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5424, -0.90998, -0.0033815)
 skeleton = NodePath("../../..")
 
 [node name="2x485" parent="misc/Ground" instance=ExtResource("7_31ds3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5904, -1.00995, -0.0033815)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6746, -0.97307, -0.0033815)
+skeleton = NodePath("../../..")
+
+[node name="2x560" parent="misc/Ground" instance=ExtResource("7_31ds3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5146, -0.97307, -0.0033815)
+skeleton = NodePath("../../..")
+
+[node name="2x561" parent="misc/Ground" instance=ExtResource("7_31ds3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.6746, -0.97307, -0.163382)
+skeleton = NodePath("../../..")
+
+[node name="2x562" parent="misc/Ground" instance=ExtResource("7_31ds3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5146, -0.97307, -0.163382)
+skeleton = NodePath("../../..")
+
+[node name="2x559" parent="misc/Ground" instance=ExtResource("7_31ds3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16, 0, 0)
 skeleton = NodePath("../../..")
 
 [node name="2x500" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.3424, -0.760687, -0.163382)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x501" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5184, -0.856687, -0.163382)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x502" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0384, -0.849946, -0.163382)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x503" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0384, -0.856687, -0.163382)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x504" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.1984, -0.760687, -0.163382)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("6_svsed")
 
 [node name="2x505" parent="misc/Ground" instance=ExtResource("4_sac78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8402, -0.47427, -0.161852)
@@ -2218,10 +3170,12 @@ skeleton = NodePath("../../..")
 [node name="2x299" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8944, 0.17802, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x300" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3984, 0.19402, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x308" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4704, -0.89398, -0.0033815)
@@ -2246,10 +3200,12 @@ skeleton = NodePath("../../..")
 [node name="2x204" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4784, -0.84598, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x205" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3184, -0.84598, -0.0033815)
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("5_d05al")
 
 [node name="2x22" parent="misc/Ground" instance=ExtResource("7_31ds3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.75835, -0.0139746, 0.0126185)
@@ -2408,6 +3364,7 @@ skeleton = NodePath("../../..")
 
 [node name="2x4" parent="misc/Ground" instance=ExtResource("10_oupys")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.36774, 0.0238269, -0.152382)
+surface_material_override/0 = ExtResource("8_f4n7k")
 
 [node name="2x5" parent="misc/Ground" instance=ExtResource("10_oupys")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.36774, -0.120173, -0.152382)
@@ -2451,3 +3408,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.9246, -1.77301, -0.190111)
 environment = SubResource("Environment_i40ri")
 
 [node name="Ui" parent="." instance=ExtResource("14_cs7p0")]
+
+[node name="Title" parent="." instance=ExtResource("15_ilnte")]
+transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, 0.629888, 0.269692, 0.461176)
