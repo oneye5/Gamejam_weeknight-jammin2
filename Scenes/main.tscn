@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c67u73shw4lvr"]
+[gd_scene load_steps=24 format=3 uid="uid://c67u73shw4lvr"]
 
 [ext_resource type="Script" path="res://Scripts/manager_singleton.gd" id="1_mbo0g"]
 [ext_resource type="PackedScene" uid="uid://cl14twedp5qi1" path="res://Scenes/Player.tscn" id="1_qrdgo"]
@@ -36,6 +36,9 @@ glow_bloom = 0.33
 fog_light_energy = 0.75
 fog_density = 0.001
 fog_height_density = 0.2441
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l7jgb"]
+size = Vector3(100, 1, 1)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_mbo0g")
@@ -3366,9 +3369,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3122, -0.9377, -0.177852)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9602, -1.0977, -0.00185156)
 surface_material_override/0 = ExtResource("8_f4n7k")
 
-[node name="2x8_170" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8162, -1.0017, 31.3421)
-
 [node name="2x8_59" parent="misc/Ground" instance=ExtResource("3_ivs0n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.4562, -1.0017, -0.00185156)
 surface_material_override/0 = ExtResource("8_f4n7k")
@@ -4569,3 +4569,17 @@ environment = SubResource("Environment_i40ri")
 
 [node name="Title" parent="." instance=ExtResource("15_ilnte")]
 transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, 0.629888, 0.269692, 0.461176)
+
+[node name="killzone" type="Node3D" parent="."]
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="killzone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.143, 5.168, 0)
+shape = SubResource("BoxShape3D_l7jgb")
+target_position = Vector3(0, 0, 0)
+script = ExtResource("10_3ewej")
+
+[node name="ShapeCast3D2" type="ShapeCast3D" parent="killzone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.143, -8.848, 0)
+shape = SubResource("BoxShape3D_l7jgb")
+target_position = Vector3(0, 0, 0)
+script = ExtResource("10_3ewej")

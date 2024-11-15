@@ -1,6 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxhdc1ex0428k"]
-
-[ext_resource type="Texture2D" uid="uid://cpve1g662gw3v" path="res://Assets/materials/Plastic_Shiny_n.png" id="1_busnl"]
+[gd_scene load_steps=5 format=3 uid="uid://cxhdc1ex0428k"]
 
 [sub_resource type="Gradient" id="Gradient_c6qw0"]
 offsets = PackedFloat32Array(0.151832, 0.455497, 0.748691)
@@ -12,9 +10,6 @@ width = 512
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_elnx1"]
 albedo_texture = SubResource("GradientTexture1D_vf3mu")
-normal_enabled = true
-normal_scale = 1.52
-normal_texture = ExtResource("1_busnl")
 
 [sub_resource type="QuadMesh" id="QuadMesh_aadg2"]
 material = SubResource("StandardMaterial3D_elnx1")
