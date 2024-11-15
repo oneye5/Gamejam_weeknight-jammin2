@@ -13,7 +13,7 @@ albedo_texture = SubResource("GradientTexture1D_vf3mu")
 
 [sub_resource type="QuadMesh" id="QuadMesh_aadg2"]
 material = SubResource("StandardMaterial3D_elnx1")
-size = Vector2(10, 100)
+size = Vector2(10, 60)
 
 [node name="Background" type="Node3D"]
 
